@@ -6,8 +6,8 @@ export const profile = {
   handle: "@matheuslcosentino",
   location: "Navegantes, SC",
   email: "matheuslopescosentino@hotmail.com",
-  phone: "+55 47 99223-0328",
-  whatsapp: "5547992230328",
+  phone: "+55 47 98854-4438",
+  whatsapp: "5547988544438",
   linkedin: "https://linkedin.com/in/matheus-cosentino",
   github: "https://github.com/matheuslcosentino",
 };
@@ -42,6 +42,17 @@ export const projects: Project[] = [
     image: "/preview-draline.jpg",
     url: "https://sitedralineestetica.vercel.app",
     stack: ["HTML", "Tailwind CSS", "Responsivo", "WhatsApp"],
+  },
+  {
+    id: "02",
+    name: "Vanessa Alves Advocacia",
+    category: "Site institucional",
+    subtitle: "Direito penal, família e cível · Navegantes, SC",
+    description:
+      "Site institucional para o escritório da advogada Vanessa Alves, com apresentação das áreas de atuação em Direito Penal, Família e Cível, informações de atendimento em Navegantes e contato para orientação jurídica.",
+    image: "/preview-vanessa.webp",
+    url: "https://sitevanessaalvesadv.vercel.app",
+    stack: ["HTML", "Tailwind CSS", "Responsivo", "Contato"],
   },
 ];
 

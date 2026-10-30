@@ -26,7 +26,8 @@ export const ProjectsSection = () => (
           description="Sites e produtos digitais entregues para clientes reais — do design à publicação."
         />
         <span className="label-mono hidden shrink-0 border-2 border-line bg-card px-3 py-1.5 text-ink-soft sm:inline-flex">
-          {projects.length} projeto publicado
+          {projects.length} projeto{projects.length === 1 ? "" : "s"} publicado
+          {projects.length === 1 ? "" : "s"}
         </span>
       </div>
 
@@ -42,14 +43,14 @@ export const ProjectsSection = () => (
                     <span className="h-2.5 w-2.5 rounded-full bg-lime" />
                   </div>
                   <span className="truncate font-mono text-[10px] tracking-tight text-foreground/40">
-                    sitedralineestetica.vercel.app
+                    {new URL(project.url).hostname}
                   </span>
                 </div>
 
                 <div className="overflow-hidden border-[3px] border-line bg-surface">
                   <img
                     src={project.image}
-                    alt={`Prévia do site ${project.name}`}
+                    alt={`Imagem de destaque do projeto ${project.name}`}
                     width={1400}
                     height={875}
                     loading="lazy"
@@ -100,7 +101,9 @@ export const ProjectsSection = () => (
         <Reveal delay={120}>
           <div className="flex flex-col items-start justify-between gap-4 border-[3px] border-dashed border-line/30 bg-card/60 px-5 py-5 sm:flex-row sm:items-center sm:px-7">
             <div className="flex items-center gap-3">
-              <span className="font-display text-2xl font-black text-line/25">02</span>
+              <span className="font-display text-2xl font-black text-line/25">
+                {String(projects.length + 1).padStart(2, "0")}
+              </span>
               <div>
                 <p className="font-display text-[15px] font-bold tracking-tight">
                   Próximo projeto em construção
