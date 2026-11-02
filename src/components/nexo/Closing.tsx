@@ -1,4 +1,3 @@
-import logo from "@/assets/nexo-logo.png.asset.json";
 import { Button } from "@/components/ui/button";
 import {
   Accordion,
@@ -8,6 +7,7 @@ import {
 } from "@/components/ui/accordion";
 import { BUSINESS_HOURS, NAV_LINKS, WHATSAPP_URL } from "@/lib/site";
 import { SectionHeading } from "./SectionHeading";
+import { SiteLogo } from "./SiteLogo";
 import { WhatsAppIcon } from "./WhatsAppIcon";
 
 export function About() {
@@ -38,7 +38,7 @@ export function About() {
         <div className="relative">
           <div className="absolute -inset-6 rounded-[2.5rem] bg-gradient-primary opacity-20 blur-3xl" />
           <div className="relative flex aspect-square items-center justify-center rounded-[2rem] border border-border bg-card p-12 shadow-elegant">
-            <img src={logo.url} alt="Logo Nexo" width={1141} height={266} className="w-full max-w-md" />
+            <SiteLogo className="w-full max-w-md" />
           </div>
         </div>
       </div>
@@ -108,7 +108,7 @@ export function SiteFooter() {
   return (
     <footer className="border-t border-night-border bg-night py-12">
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-5 md:flex-row md:px-8">
-        <img src={logo.url} alt="Nexo" width={1141} height={266} className="logo-white h-7 w-auto" />
+        <SiteLogo className="logo-white h-7 w-auto" />
         <nav className="flex flex-wrap justify-center gap-6">
           {NAV_LINKS.map((l) => (
             <a key={l.href} href={l.href} className="text-sm text-night-muted transition-colors hover:text-night-foreground">

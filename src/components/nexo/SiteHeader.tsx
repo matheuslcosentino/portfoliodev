@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/nexo-logo.png.asset.json";
 import { Button } from "@/components/ui/button";
 import { NAV_LINKS, WHATSAPP_URL } from "@/lib/site";
 import { cn } from "@/lib/utils";
+import { SiteLogo } from "./SiteLogo";
 import { WhatsAppIcon } from "./WhatsAppIcon";
 
 export function SiteHeader() {
@@ -28,13 +28,7 @@ export function SiteHeader() {
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 md:h-20 md:px-8">
         <a href="#inicio" aria-label="Nexo — início" className="shrink-0">
-          <img
-            src={logo.url}
-            alt="Nexo"
-            width={1141}
-            height={266}
-            className={cn("h-7 w-auto transition-all md:h-8", !solid && "logo-white")}
-          />
+          <SiteLogo className={cn("h-7 w-auto transition-all md:h-8", !solid && "logo-white")} />
         </a>
 
         <nav className="hidden items-center gap-8 lg:flex">
