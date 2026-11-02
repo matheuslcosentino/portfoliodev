@@ -10,8 +10,15 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
-reports
+.output
+.vinxi
+.tanstack/**
+.nitro
 *.local
+
+# Wrangler / Cloudflare
+.wrangler/
+.dev.vars
 
 # Editor directories and files
 .vscode/*
@@ -23,4 +30,3 @@ reports
 *.njsproj
 *.sln
 *.sw?
-code_template.zip

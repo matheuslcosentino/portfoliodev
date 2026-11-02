@@ -1,24 +1,16 @@
-import Index from "./pages/Index";
-import NotFound from "./pages/NotFound";
+import { QueryClient } from "@tanstack/react-query";
+import { createRouter } from "@tanstack/react-router";
+import { routeTree } from "./routeTree.gen";
 
-export const routers = [
-  {
-    path: "/",
-    name: "home",
-    element: <Index />,
-  },
-  /* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */
-  {
-    path: "*",
-    name: "404",
-    element: <NotFound />,
-  },
-];
+export const getRouter = () => {
+  const queryClient = new QueryClient();
 
-declare global {
-  interface Window {
-    __routers__: typeof routers;
-  }
-}
+  const router = createRouter({
+    routeTree,
+    context: { queryClient },
+    scrollRestoration: true,
+    defaultPreloadStaleTime: 0,
+  });
 
-window.__routers__ = routers;
+  return router;
+};
